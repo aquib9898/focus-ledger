@@ -1,0 +1,98 @@
+.matrix-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.matrix-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 4px;
+    width: 100%;
+    max-width: 440px;
+    aspect-ratio: 1;
+}
+
+.matrix-block {
+    border-radius: 6px;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    aspect-ratio: 1;
+}
+
+.matrix-block:hover {
+    transform: scale(1.12);
+    z-index: 2;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+}
+
+.matrix-block--grey {
+    background: rgba(205, 214, 244, 0.08);
+    border: 1px solid rgba(205, 214, 244, 0.06);
+}
+
+.matrix-block--grey:hover {
+    background: rgba(205, 214, 244, 0.14);
+}
+
+.matrix-block--green {
+    background: rgba(166, 227, 161, 0.45);
+    border: 1px solid rgba(166, 227, 161, 0.25);
+    box-shadow: inset 0 0 8px rgba(166, 227, 161, 0.1);
+}
+
+.matrix-block--green:hover {
+    background: rgba(166, 227, 161, 0.65);
+    box-shadow: 0 0 16px rgba(166, 227, 161, 0.3);
+}
+
+.matrix-block--red {
+    background: rgba(243, 139, 168, 0.45);
+    border: 1px solid rgba(243, 139, 168, 0.25);
+    box-shadow: inset 0 0 8px rgba(243, 139, 168, 0.1);
+}
+
+.matrix-block--red:hover {
+    background: rgba(243, 139, 168, 0.65);
+    box-shadow: 0 0 16px rgba(243, 139, 168, 0.3);
+}
+
+/* Tooltip */
+.matrix-tooltip {
+    position: fixed;
+    transform: translate(-50%, -100%);
+    background: #1e1e2e;
+    border: 1px solid rgba(205, 214, 244, 0.12);
+    border-radius: 10px;
+    padding: 10px 14px;
+    z-index: 100;
+    pointer-events: none;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    min-width: 180px;
+}
+
+.tooltip-range {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: rgba(205, 214, 244, 0.7);
+    margin-bottom: 6px;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+}
+
+.tooltip-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 0.72rem;
+}
+
+.tooltip-label {
+    font-weight: 600;
+}
+
+.tooltip-value {
+    color: rgba(205, 214, 244, 0.6);
+    font-variant-numeric: tabular-nums;
+}

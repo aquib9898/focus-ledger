@@ -1,0 +1,114 @@
+.focus-chart-wrapper {
+    width: 100%;
+    max-width: 80vw;
+    margin: 28px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.focus-chart-title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(205, 214, 244, 0.4);
+    margin-bottom: 12px;
+}
+
+.focus-chart-scroll {
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(205, 214, 244, 0.1) transparent;
+    border-radius: 12px;
+    background: rgba(205, 214, 244, 0.02);
+    border: 1px solid rgba(205, 214, 244, 0.05);
+    padding: 8px;
+}
+
+.focus-chart-scroll::-webkit-scrollbar {
+    height: 6px;
+}
+
+.focus-chart-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.focus-chart-scroll::-webkit-scrollbar-thumb {
+    background: rgba(205, 214, 244, 0.1);
+    border-radius: 3px;
+}
+
+.focus-chart-svg {
+    display: block;
+    min-width: 1200px;
+}
+
+.chart-point {
+    cursor: pointer;
+    transition: r 0.15s ease;
+}
+
+.chart-point:hover {
+    r: 4.5;
+}
+
+/* Tooltip */
+.chart-tooltip {
+    position: fixed;
+    z-index: 200;
+    background: #1e1e2e;
+    border: 1px solid rgba(205, 214, 244, 0.12);
+    border-radius: 10px;
+    padding: 10px 14px;
+    pointer-events: none;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    min-width: 160px;
+    font-family: 'Inter', sans-serif;
+}
+
+.chart-tooltip-block {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: rgba(205, 214, 244, 0.6);
+    margin-bottom: 2px;
+}
+
+.chart-tooltip-range {
+    font-size: 0.7rem;
+    color: rgba(205, 214, 244, 0.4);
+    margin-bottom: 6px;
+    font-variant-numeric: tabular-nums;
+}
+
+.chart-tooltip-pct {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.chart-tooltip-dur {
+    font-size: 0.7rem;
+    color: rgba(205, 214, 244, 0.45);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Desktop: chart fits nicely at 80vw */
+@media (min-width: 1300px) {
+    .focus-chart-scroll {
+        overflow-x: hidden;
+    }
+
+    .focus-chart-svg {
+        width: 100%;
+        min-width: unset;
+    }
+}
+
+/* Mobile: ensure scrollable */
+@media (max-width: 600px) {
+    .focus-chart-wrapper {
+        max-width: 95vw;
+    }
+}

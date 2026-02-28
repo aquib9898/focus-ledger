@@ -1,0 +1,73 @@
+.session-list {
+    flex: 1;
+    min-width: 0;
+}
+
+.session-list-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(205, 214, 244, 0.08);
+}
+
+.focus-text {
+    color: #a6e3a1;
+}
+
+.waste-text {
+    color: #f38ba8;
+}
+
+.session-list-empty {
+    color: rgba(205, 214, 244, 0.3);
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+.session-list-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-height: 280px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(205, 214, 244, 0.1) transparent;
+}
+
+.session-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 8px 10px;
+    background: rgba(205, 214, 244, 0.03);
+    border-radius: 8px;
+    border: 1px solid rgba(205, 214, 244, 0.05);
+    transition: background 0.2s ease;
+}
+
+.session-item:hover {
+    background: rgba(205, 214, 244, 0.06);
+}
+
+.session-item.session-active {
+    border-color: rgba(205, 214, 244, 0.15);
+    background: rgba(205, 214, 244, 0.05);
+}
+
+.session-duration {
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+}
+
+.session-range {
+    font-size: 0.7rem;
+    color: rgba(205, 214, 244, 0.4);
+    font-variant-numeric: tabular-nums;
+}

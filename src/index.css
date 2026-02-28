@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Catppuccin Mocha palette */
+  --bg-base: #1e1e2e;
+  --bg-surface: #181825;
+  --bg-overlay: #11111b;
+  --text-primary: #cdd6f4;
+  --text-secondary: rgba(205, 214, 244, 0.6);
+  --text-muted: rgba(205, 214, 244, 0.3);
+  --accent-green: #a6e3a1;
+  --accent-red: #f38ba8;
+  --accent-blue: #89b4fa;
+  --accent-teal: #94e2d5;
+  --accent-mauve: #cba6f7;
+  --border-subtle: rgba(205, 214, 244, 0.06);
+  --border-medium: rgba(205, 214, 244, 0.1);
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg-base);
+  color: var(--text-primary);
+  line-height: 1.5;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Subtle animated gradient background */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse at 20% 20%, rgba(166, 227, 161, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(243, 139, 168, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(137, 180, 250, 0.02) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(205, 214, 244, 0.1);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(205, 214, 244, 0.2);
+}
+
+/* Selection */
+::selection {
+  background: rgba(166, 227, 161, 0.2);
+  color: #cdd6f4;
+}
+
+/* Utility classes */
+.focus-text {
+  color: var(--accent-green);
+}
+
+.waste-text {
+  color: var(--accent-red);
+}
+
+/* Smooth transitions by default */
+a,
+button {
+  transition: all 0.2s ease;
+}
+
+button {
+  font-family: 'Inter', sans-serif;
+}

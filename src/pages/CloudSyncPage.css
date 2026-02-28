@@ -1,0 +1,314 @@
+.cs-page {
+    min-height: 100vh;
+    padding: 0 16px 40px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cs-header {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    gap: 12px;
+}
+
+.cs-back {
+    background: none;
+    border: none;
+    color: rgba(205, 214, 244, 0.6);
+    font-size: 0.85rem;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.cs-back:hover {
+    background: rgba(205, 214, 244, 0.06);
+    color: #cdd6f4;
+}
+
+.cs-title {
+    flex: 1;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #89b4fa, #94e2d5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.cs-spacer {
+    width: 70px;
+}
+
+.cs-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.cs-card {
+    background: linear-gradient(145deg, rgba(30, 30, 46, 0.8), rgba(24, 24, 37, 0.9));
+    border: 1px solid rgba(205, 214, 244, 0.06);
+    border-radius: 20px;
+    padding: 24px;
+    transition: all 0.2s ease;
+}
+
+.cs-card:hover {
+    border-color: rgba(205, 214, 244, 0.1);
+}
+
+.cs-card-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.cs-card-icon {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.cs-card h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #cdd6f4;
+    margin-bottom: 4px;
+}
+
+.cs-card p {
+    font-size: 0.8rem;
+    color: rgba(205, 214, 244, 0.45);
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+
+/* Toggle Switch */
+.cs-toggle {
+    position: relative;
+    width: 52px;
+    height: 28px;
+    flex-shrink: 0;
+    margin-top: 32px;
+}
+
+.cs-toggle.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.cs-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.cs-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: rgba(205, 214, 244, 0.1);
+    border-radius: 28px;
+    transition: all 0.3s ease;
+}
+
+.cs-toggle-slider::before {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    left: 3px;
+    bottom: 3px;
+    background: rgba(205, 214, 244, 0.5);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.cs-toggle input:checked+.cs-toggle-slider {
+    background: rgba(166, 227, 161, 0.3);
+}
+
+.cs-toggle input:checked+.cs-toggle-slider::before {
+    transform: translateX(24px);
+    background: #a6e3a1;
+}
+
+/* Buttons */
+.cs-btn {
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: 'Inter', sans-serif;
+}
+
+.cs-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.cs-btn-sync {
+    background: linear-gradient(135deg, #89b4fa, #74c7ec);
+    color: #1e1e2e;
+}
+
+.cs-btn-sync:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(137, 180, 250, 0.3);
+}
+
+.cs-btn-export {
+    background: rgba(166, 227, 161, 0.1);
+    color: #a6e3a1;
+    border: 1px solid rgba(166, 227, 161, 0.15);
+}
+
+.cs-btn-export:hover {
+    background: rgba(166, 227, 161, 0.15);
+}
+
+.cs-btn-import {
+    background: rgba(137, 180, 250, 0.1);
+    color: #89b4fa;
+    border: 1px solid rgba(137, 180, 250, 0.15);
+}
+
+.cs-btn-import:hover {
+    background: rgba(137, 180, 250, 0.15);
+}
+
+.cs-btn-group {
+    display: flex;
+    gap: 10px;
+}
+
+.cs-btn-group .cs-btn {
+    flex: 1;
+}
+
+/* Select */
+.cs-select {
+    width: 100%;
+    padding: 12px 16px;
+    background: rgba(205, 214, 244, 0.05);
+    border: 1px solid rgba(205, 214, 244, 0.1);
+    border-radius: 12px;
+    color: #cdd6f4;
+    font-size: 0.85rem;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.2s ease;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23cdd6f4' stroke-width='2'%3E%3Cpolyline points='6,9 12,15 18,9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+}
+
+.cs-select:focus {
+    border-color: rgba(137, 180, 250, 0.4);
+}
+
+.cs-select:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.cs-select option {
+    background: #1e1e2e;
+    color: #cdd6f4;
+}
+
+/* Spinner */
+.cs-spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(30, 30, 46, 0.3);
+    border-top-color: #1e1e2e;
+    border-radius: 50%;
+    animation: cs-spin 0.6s linear infinite;
+}
+
+@keyframes cs-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Guest notice */
+.cs-guest-notice {
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: rgba(243, 139, 168, 0.08);
+    border: 1px solid rgba(243, 139, 168, 0.12);
+    border-radius: 10px;
+    font-size: 0.75rem;
+    color: rgba(205, 214, 244, 0.6);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.cs-login-link {
+    background: none;
+    border: none;
+    color: #89b4fa;
+    font-size: 0.75rem;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.cs-login-link:hover {
+    color: #b4d0fb;
+}
+
+.cs-user-badge {
+    margin-top: 12px;
+    padding: 8px 12px;
+    background: rgba(166, 227, 161, 0.06);
+    border-radius: 8px;
+    font-size: 0.75rem;
+    color: rgba(205, 214, 244, 0.5);
+}
+
+.cs-user-badge strong {
+    color: #a6e3a1;
+}
+
+.cs-conflict-warning {
+    margin-bottom: 12px;
+    padding: 10px 14px;
+    background: rgba(250, 179, 135, 0.08);
+    border: 1px solid rgba(250, 179, 135, 0.15);
+    border-radius: 10px;
+    font-size: 0.75rem;
+    color: #fab387;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.cs-sync-result {
+    margin-bottom: 12px;
+    padding: 8px 12px;
+    background: rgba(137, 180, 250, 0.06);
+    border-radius: 8px;
+    font-size: 0.75rem;
+    color: rgba(205, 214, 244, 0.5);
+}
