@@ -12,4 +12,4 @@ async function connectDB() {
 
 module.exports = connectDB;
 
-//have to increase long term memory..
+//have to increase long term memory....
